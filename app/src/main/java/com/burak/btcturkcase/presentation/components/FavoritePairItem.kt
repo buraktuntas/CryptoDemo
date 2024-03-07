@@ -46,7 +46,12 @@ fun FavoritePairItem(
     ) {
         Column(
             modifier = Modifier
-                .padding(8.dp)
+                .padding(
+                    start = 8.dp,
+                    top = 4.dp,
+                    bottom = 4.dp,
+                    end = 12.dp
+                )
         ) {
             Text(
                 text = item.pair,

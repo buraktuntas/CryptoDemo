@@ -1,6 +1,5 @@
 package com.burak.btcturkcase.presentation.screens.pairChart
 
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.burak.btcturkcase.base.BaseViewModel
 import com.burak.btcturkcase.common.ResultState
@@ -9,11 +8,9 @@ import com.burak.btcturkcase.navigation.NavigationType
 import com.burak.btcturkcase.util.ExceptionHandler
 import com.burak.btcturkcase.util.UiEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -46,7 +43,7 @@ class PairChartViewModel @Inject constructor(
         }
     }
 
-    private fun fetchChartData() {
+    fun fetchChartData() {
         viewModelScope.launch(ExceptionHandler.handler) {
             updatePageLoading(true)
             val (now, from, to) = calculateTimeRange()
@@ -98,7 +95,7 @@ class PairChartViewModel @Inject constructor(
         }
     }
 
-    private fun calculateTimeRange(): Triple<Long, Long, Long> {
+    fun calculateTimeRange(): Triple<Long, Long, Long> {
         val now = System.currentTimeMillis() / 1000
         val fifteenDaysInSeconds = 15 * 24 * 60 * 60 // 15 günü saniye cinsinden hesapla
         val from = now - fifteenDaysInSeconds

@@ -47,7 +47,6 @@ hilt-compose-nav = "1.2.0"
 room = "2.6.1"
 
 #Android Chart
-mpandroidchart = "v3.1.0"
 vico = "2.0.0-alpha.10"
 
 #Tests
@@ -56,6 +55,8 @@ androidx-test-ext-junit = "1.1.5"
 espresso-core = "3.5.1"
 appcompat = "1.6.1"
 material = "1.11.0"
+mockk = "1.12.0" # Mockk için son sürüm
+assertj = "3.19.0" # AssertJ için son sürüm
 
 [libraries]
 #Core libraries
@@ -65,8 +66,10 @@ core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx
 lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
-mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchart" }
 vico-compose-m3 = { group = "com.patrykandpatrick.vico", name = "compose-m3", version.ref = "vico" }
+mockk = { module = "io.mockk:mockk", version = "1.13.7" }
+
+assertj-core = { group = "org.assertj", name = "assertj-core", version.ref = "assertj" }
 
 
 

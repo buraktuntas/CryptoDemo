@@ -6,7 +6,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.unit.dp
-import com.github.mikephil.charting.data.Entry
 import com.patrykandpatrick.vico.compose.component.rememberLayeredComponent
 import com.patrykandpatrick.vico.compose.component.rememberLineComponent
 import com.patrykandpatrick.vico.compose.component.rememberShapeComponent
@@ -71,7 +70,7 @@ internal fun rememberMarker(labelPosition: MarkerComponent.LabelPosition = Marke
         @SuppressLint("RestrictedApi")
         object : MarkerComponent(label, labelPosition, indicator, guideline) {
             init {
-                labelFormatter = MarkerLabelFormatter { markedEntries, chartValues ->
+                labelFormatter = MarkerLabelFormatter { markedEntries, _ ->
                     markedEntries.firstOrNull()?.let { entryModel ->
                         val xValue = entryModel.entry.x
                         val yValue = entryModel.entry.y

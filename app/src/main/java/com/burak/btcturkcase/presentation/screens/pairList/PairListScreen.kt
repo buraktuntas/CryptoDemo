@@ -111,6 +111,7 @@ fun PairListScreen(
                         fontWeight = FontWeight.Bold,
                         style = MaterialTheme.typography.headlineSmall
                     )
+                    Spacer(modifier = Modifier.height(10.dp))
                 }
 
                 uiState.allList.let { itemList ->

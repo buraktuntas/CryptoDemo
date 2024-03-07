@@ -63,7 +63,7 @@ class PairListViewModel @Inject constructor(
         }
     }
 
-    private fun callGetPairList(symbol: String = "USDT") {
+    fun callGetPairList(symbol: String = "USDT") {
         viewModelScope.launch(ExceptionHandler.handler) {
             updatePageLoading(true)
             getPairListUseCase(
@@ -103,7 +103,7 @@ class PairListViewModel @Inject constructor(
         }
     }
 
-    private fun updateFavoriteItem(item: PairInfo) {
+    fun updateFavoriteItem(item: PairInfo) {
         viewModelScope.launch {
             val updatedItem = withContext(Dispatchers.IO) {
                 val updated = item.copy(isFavorite = item.isFavorite?.not() ?: false)
@@ -118,7 +118,7 @@ class PairListViewModel @Inject constructor(
         }
     }
 
-    private fun updatePageLoading(isLoading: Boolean) {
+    fun updatePageLoading(isLoading: Boolean) {
         viewModelScope.launch(ExceptionHandler.handler) {
             _uiState.update { currentState ->
                 currentState.copy(
