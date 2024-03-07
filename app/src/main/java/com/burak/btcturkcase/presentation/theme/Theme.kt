@@ -1,4 +1,4 @@
-package com.burak.btcturkcase.ui.theme
+package com.burak.btcturkcase.presentation.theme
 
 import android.app.Activity
 import android.os.Build
@@ -16,15 +16,15 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = BlueDark,
+    secondary = BlueDark,
+    tertiary = BlueDark
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    primary = BlueDark,
+    secondary = BlueDark,
+    tertiary = BlueDark
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
