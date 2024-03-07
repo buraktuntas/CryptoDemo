@@ -17,10 +17,10 @@ class GetPairListUseCase(
             .catch { exception ->
                 onResult(ResultState.Error(exception))
             }
-            .collect { rocketsDtoList ->
-                val rocketInfoList = convertResponseToUI(rocketsDtoList)
-                pairDataRepository.addAll(rocketInfoList)
-                onResult(ResultState.Success(rocketInfoList))
+            .collect { pairDtoList ->
+                val newList = convertResponseToUI(pairDtoList)
+                pairDataRepository.addAll(newList)
+                onResult(ResultState.Success(newList))
             }
     }
 

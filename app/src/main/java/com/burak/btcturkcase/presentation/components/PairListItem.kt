@@ -16,18 +16,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.burak.btcturkcase.data.local.entity.PairInfo
-import com.burak.btcturkcase.presentation.theme.Green
 import com.burak.btcturkcase.presentation.theme.Grey
 import com.burak.btcturkcase.presentation.theme.Orange
-import com.burak.btcturkcase.presentation.theme.Red
 import com.burak.btcturkcase.presentation.theme.White
-import java.math.BigDecimal
-import java.math.RoundingMode
 
 
 @Composable

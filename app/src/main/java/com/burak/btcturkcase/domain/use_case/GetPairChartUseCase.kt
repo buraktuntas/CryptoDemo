@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.catch
 class GetPairChartUseCase(
     private val pairRepository: PairRepository,
 ) {
-
     suspend operator fun invoke(
         symbol: String,
         resolution: String,

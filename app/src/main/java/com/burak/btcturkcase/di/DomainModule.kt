@@ -14,7 +14,6 @@ import dagger.hilt.android.scopes.ViewModelScoped
 @InstallIn(ViewModelComponent::class)
 object DomainModule {
 
-    /* Use Case */
     @ViewModelScoped
     @Provides
     fun provideCallGetPairListUseCase(

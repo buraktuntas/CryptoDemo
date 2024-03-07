@@ -1,7 +1,5 @@
 package com.burak.btcturkcase.presentation.screens.pairList
 
-import android.util.Log
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.burak.btcturkcase.base.BaseViewModel
 import com.burak.btcturkcase.common.ResultState
@@ -14,12 +12,10 @@ import com.burak.btcturkcase.util.ExceptionHandler
 import com.burak.btcturkcase.util.UiEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

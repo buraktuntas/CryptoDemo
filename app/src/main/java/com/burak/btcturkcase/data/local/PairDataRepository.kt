@@ -10,16 +10,16 @@ class PairDataRepository @Inject constructor(private val pairInfoDao: PairInfoDa
         return pairInfoDao.readAllPairData()
     }
 
-    suspend fun addAll(rocketInfo: List<PairInfo>) {
-        pairInfoDao.addAllPair(rocketInfo)
+    suspend fun addAll(pairInfo: List<PairInfo>) {
+        pairInfoDao.addAllPair(pairInfo)
     }
 
     fun readAllFavorite(): Flow<List<PairInfo>> {
         return pairInfoDao.readAllFavorite()
     }
 
-    fun updatePair(rocketInfo: PairInfo) {
-        pairInfoDao.updatePair(rocketInfo)
+    fun updatePair(pairInfo: PairInfo) {
+        pairInfoDao.updatePair(pairInfo)
     }
 
     suspend fun deleteAllPair() {
