@@ -1,4 +1,4 @@
-# BtcTurkCase App
+# CryptoCase App
 
 * MVVM Clean Architecture
 * Kotlin
