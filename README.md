@@ -1,4 +1,4 @@
-# CryptoCase App
+# CryptoDemo App
 
 * MVVM Clean Architecture
 * Kotlin
